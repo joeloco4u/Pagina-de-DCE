@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shaker Box | Craft Your Magic</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #0b0033;
+      color: white;
+    }
+
+    header {
+      background: /*linear-gradient(90deg, #ff00a8, #ff6b00);*/ #010e30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+    }
+
+    header img {
+      height: 125px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffe600;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: radial-gradient(circle, #ff00a8, #ff6b00);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .hero button {
+      background-color: #ffe600;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      color: #0b0033;
+      transition: transform 0.2s;
+    }
+
+    .hero button:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #120052;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+
+    .hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+    background: radial-gradient(circle, #ff00a8, #ff6b00);
+    color: white;
+    text-align: left;
+    }
+
+    .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    gap: 40px;
+    }
+
+    .hero-text {
+    flex: 1;
+    }
+
+    .hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    }
+
+    .hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    }
+
+    .hero-text button {
+    background-color: #ffe600;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    color: #0b0033;
+    transition: transform 0.2s;
+    }
+
+    .hero-text button:hover {
+    transform: scale(1.05);
+    }
+
+    .hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    }
+
+    .hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    }
+     
+    .about {
+  background-color: #010e30;
+  color: #fff;
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  font-size: 2.5em;
+  color: #ff00a8;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-logo {
+  width: 200px;
+  margin-bottom: 25px;
+  transition: transform 0.3s;
+}
+
+.about-logo:hover {
+  transform: scale(1.05);
+}
+
+.about-logo {
+  width: 200px;
+  margin-bottom: 25px;
+  border-radius: 50%;
+  /*box-shadow: 0 0 25px rgba(255, 0, 168, 0.3);*/
+}
+
+.kits {
+  background: linear-gradient(135deg, #ff00a8, #ff6b00, #ffb400);
+  color: #fff;
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.kits-content {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.kits h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.kits-intro {
+  font-size: 1.1em;
+  margin-bottom: 50px;
+  color: #fff8f8;
+}
+
+.kit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.kit-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.kit-card:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.kit-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.kit-card h3 {
+  color: #ffe600;
+  margin-bottom: 10px;
+}
+
+.kit-card p {
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.contact {
+  background-color: #010e30;
+  color: white;
+  padding: 100px 10%;
+  text-align: center;
+}
+
+.contact-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact h2 {
+  font-size: 2.5em;
+  color: #ff00a8;
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.1em;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #0b0033;
+  border: 2px solid #ff00a8;
+  border-radius: 10px;
+  color: white;
+  padding: 15px;
+  font-size: 1em;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ffe600;
+  background-color: #120052;
+  outline: none;
+}
+
+.contact-form button {
+  background-color: #ffe600;
+  color: #0b0033;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+}
+
+.socials a {
+  color: #ffe600;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.socials a:hover {
+  color: #ff00a8;
+}
+
+/*--*/
+
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffe600;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  transition: color 0.3s;
+}
+
+.socials a:hover {
+  color: #ff00a8;
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 0 4px rgba(255, 0, 168, 0.4));
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="images/logo.jpeg" alt="Logo Shaker Box" />
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Sobre Nosotros</a>
+      <a href="#kits">Nuestros Kits</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="inicio">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>Craft your Magic</h1>
+      <p>Descubre la experiencia Shaker Box: Create your magic with your favorite flavors!</p>
+      <button>Explora nuestros kits</button>
+    </div>
+
+    <div class="hero-image">
+      <img src="images/imagen1.jpg" alt="Imagen de cóctel colorido">
+    </div>
+  </div>
+</section>
+
+<section class="about" id="nosotros">
+  <div class="about-content">
+    <img src="images/logo.jpeg" alt="Logo Shaker Box" class="about-logo">
+    <h2>Sobre Nosotros</h2>
+    <p>
+      En <strong>Shaker Box</strong> buscamos ofrecer una experiencia creativa y social. Creemos que la mixología es más que preparar cócteles:
+      es una forma de conectar, crear y disfrutar. Nuestros kits están diseñados para
+      que cualquier persona —con o sin experiencia— pueda vivir la emoción de
+      preparar sus propias bebidas con estilo, sabor y creatividad.
+    </p>
+    <p>
+      Cada caja contiene ingredientes seleccionados, herramientas básicas
+      y una guía paso a paso para que descubras el arte de mezclar desde tu hogar.
+    </p>
+  </div>
+</section>
+
+<section class="kits" id="kits">
+  <div class="kits-content">
+    <h2>Nuestros Kits</h2>
+    <p class="kits-intro">
+      Cada kit está diseñado para que experimentes nuevos sabores, colores y técnicas
+      desde la comodidad de tu hogar. ¡Solo elige, mezcla y disfruta! Varios de nuestros kits mas populares son...
+    </p>
+    <div class="kit-grid">
+      <div class="kit-card">
+        <img src="images/image2.jpeg" alt="Kit Tropical Vibes">
+        <h3>Mojito</h3>
+        <p>Refrescante, vibrante y con ese toque de menta que nunca falla. El clásico que convierte cualquier momento en verano.</p>
+      </div>
+      <div class="kit-card">
+        <img src="images/image3.jpg" alt="Kit Citrus Spark">
+        <h3>Piña Colada</h3>
+        <p>Dulce, cremosa y soñadora. Cada sorbo te transporta directo a la playa, sin salir de casa.</p>
+      </div>
+      <div class="kit-card">
+        <img src="images/image4.jpg" alt="Kit Night Glow">
+        <h3>Margarita</h3>
+        <p>Equilibrio perfecto entre lo cítrico y lo atrevido. El cóctel ideal para quienes saben disfrutar con actitud.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contacto">
+  <div class="contact-content">
+    <h2>Contáctanos</h2>
+    <p>¿Tienes dudas, ideas o quieres unirte a la experiencia Shaker Box? Escríbenos y te responderemos pronto.</p>
+
+    <form class="contact-form">
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo" required>
+      <textarea placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <div class="socials">
+  <p>¡Síguenos!:</p>
+  <a href="https://www.instagram.com/shakerbox_mcbo?igsh=MjlwcGtkeTljMXU=" target="_blank">
+    <img src="images/logo.jpeg" alt="Instagram" class="social-icon"> @shakerbox_mcbo
+  </a>
+</div>
+
+  </div>
+</section>
+
+
+  <footer>
+    © 2025 Shaker Box — Craft Your Magic
+  </footer>
+</body>
+</html>
